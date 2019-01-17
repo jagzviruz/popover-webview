@@ -1,0 +1,39 @@
+{
+  "name": "popover-webview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/popview.js",
+  "scripts": {
+    "prebuild": "rm -rf dist lib",
+    "build": "parcel build --no-source-maps --out-dir lib src/popover.js",
+    "dev": "concurrently 'npm run server' 'npm run sample'",
+    "sample": "parcel src/index.html --open",
+    "server": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagzviruz/popover-webview.git"
+  },
+  "keywords": [
+    "popover",
+    "web-view",
+    "pre-load"
+  ],
+  "author": "Jagadish, K. <k.jagdish@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jagzviruz/popover-webview/issues"
+  },
+  "homepage": "https://github.com/jagzviruz/popover-webview#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "concurrently": "^4.1.0",
+    "crawler": "^1.2.0",
+    "express": "^4.16.4",
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.16.0"
+  }
+}

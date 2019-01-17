@@ -1,0 +1,49 @@
+.popover-enabled {
+  border: 1px dashed #fbb433;
+  color: #fbb433;
+  display: inline-block;
+  margin: 3px;
+  padding: 3px;
+  text-decoration: none;
+
+  &:before {
+    content: '\1F50D';
+    font-size: 0.7em;
+  }
+}
+
+.popover {
+  display: none;
+  z-index: 100000;
+
+  .backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 100001;
+  }
+
+  &.shown {
+    display: initial;
+  }
+
+  iframe.embedded {
+    position: fixed !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    top: 30px !important;
+    right: 5% !important;
+    left: 5% !important;
+    bottom: 40px !important;
+    height: 90%;
+    width: 90%;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    zoom: 1;
+    z-index: 100002;
+  }
+}
